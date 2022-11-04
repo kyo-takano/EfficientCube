@@ -78,7 +78,7 @@ def beam_search(
                 if __eval in ["softmax","cumprod"]:
                     value_distribution = softmax(value_distribution)
                     if __eval=="cumprod":
-                        value *= c["value"] # multiply the cumulative probability so far of the expanded path
+                        value_distribution *= c["value"] # multiply the cumulative probability so far of the expanded path
 
                 for m, value in zip(env.moves_inference, value_distribution): # iterate over all possible moves.
                     # predicted value to expand the path with the given move.
@@ -107,7 +107,7 @@ def beam_search(
                                             # Two mutually canceling moves
                                             continue
                                         elif len(c_path)>1:
-                                            if c_path[-2][0] == m[0] and c_path[-1][0] == cube.pairing[m[0]]:
+                                            if c_path[-2][0] == m[0] and c_path[-1][0] == env.pairing[m[0]]:
                                                 # Two mutually canceling moves sandwiching an opposite face move
                                                 continue
                             else:
