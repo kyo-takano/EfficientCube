@@ -1,4 +1,4 @@
-# Self-Supervision is All You Need for Solving Rubik's Cube 
+# 🧩Self-Supervision is All You Need for Solving Rubik's Cube 
 
 This repository contains code, models, and solutions as reported in the following paper:
 > Takano, K. [Self-Supervision is All You Need for Solving Rubik's Cube](https://arxiv.org/abs/2106.03157). (2021) 
@@ -6,6 +6,8 @@ This repository contains code, models, and solutions as reported in the followin
 Briefly explained, the idea is to teach a neural network the stochastic process of scrambling the Rubik's Cube at random.
 Despite its simplicity, the proposed method can yield optimal or near-optimal solutions.
 Please read the paper for technical details.
+
+**Demo is available on Replicate**: [replicate.com/kyo-takano/efficientcube](https://replicate.com/kyo-takano/efficientcube)
 
 ## Code
 We provide ***standalone*** Jupyter Notebooks to run and test the proposed method on some goal-predefined combinatorial problems.
@@ -104,27 +106,28 @@ For full replications, please modify the hyperparameters.
 ## Models
 We put [TorchScript](https://pytorch.org/docs/stable/jit.html) models as `./models/{cube3|puzzle15|lightsout7}/*steps_scripted.pth`.
 
-Example_usage (Rubik's Cube):
+Example usage (Rubik's Cube):
 ```python
 # setup scramble and search parameters
 scramble = """F U U L L B B F' U L L U R R D D L' B L L B' R R U U""" # Scramble for current *human* world record 
-beam_width = 2**8
-max_depth = 50
-__eval = 'logits' # you may want to change this to 'cumprod' to get a better solution, especially for 15 puzzle.
+beam_width = 2**10
+max_depth = 52 # arbitrary
 
 # load the trained model
 import torch
 device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
-model = torch.jit.load(f"./models/cube3/1000000steps_scripted.pth")
+model = torch.jit.load(f"./models/cube3/1000000steps_scripted.pth").to(device)
 model.eval()
 
-# load Rubik's Cube environment and apply the scramble
+# set up Rubik's Cube environment and apply the scramble
 from utils import environments
 env = environments.Cube3()
 env.apply_scramble(scramble)
 
+# execute a beam search
 from utils import search
-success, result = search.beam_search(env, model, max_depth, beam_width, __eval==__eval)
+success, result = search.beam_search(env, model, max_depth, beam_width)
+
 if success:
     print('Solution:', ' '.join(result['solutions']))
     print('Length:', len(result['solutions']))
