@@ -1,5 +1,7 @@
 # 🧩 Self-Supervision is All You Need for Solving Rubik's Cube 
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/kyo-takano/EfficientCube/blob/main/notebooks/main.ipynb) [<svg xmlns="http://www.w3.org/2000/svg" width="128" height="20" role="img"><rect width="128" height="20" fill="black" /><g fill="#fff" text-anchor="middle" font-family="basier_square, Helvetica, sans-serif" text-rendering="geometricPrecision" font-size="110"><text x="125" y="140" transform="scale(.1)" fill="#fff" textLength="110">🚀</text><text x="740" y="140" transform="scale(.1)" fill="#fff" textLength="970">Try in Replicate</text></g></svg>](https://replicate.com/kyo-takano/efficientcube)
+
 This repository contains code, models, and solutions as reported in the following paper:
 > Takano, K. [Self-Supervision is All You Need for Solving Rubik's Cube](https://arxiv.org/abs/2106.03157). (2021) 
 
