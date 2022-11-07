@@ -1,4 +1,4 @@
-# 🧩Self-Supervision is All You Need for Solving Rubik's Cube 
+# 🧩 Self-Supervision is All You Need for Solving Rubik's Cube 
 
 This repository contains code, models, and solutions as reported in the following paper:
 > Takano, K. [Self-Supervision is All You Need for Solving Rubik's Cube](https://arxiv.org/abs/2106.03157). (2021) 
@@ -140,8 +140,13 @@ else:
 ```
 
 ## Solutions
-Under `./results/`, problems have their own subdirectory containing Pickle file(s) (`./results/{cube3|puzzle15|lightsout7}/*.pkl`).
-Each of the files holds a set of results (`solutions`, `times`, and `num_nodes_generated`) obtained with parameters `n` (number of training steps) and `k` (beam width).
+Under `./results/`, problems have their own subdirectory containing Pickle file(s) (`./results/{cube3|puzzle15|lightsout7}/n={training_steps}.k={beam_width}.pkl`).
+
+Each of the files holds a set of results (`solutions`, `times`, and `num_nodes_generated`) obtained with parameters `n` (number of training steps) and `k` (beam width). 
+Please note that we only include the *actual* times taken per solution.
+
+The DeepCubeA dataset is available from either [Code Ocean](http://doi.org/10.24433/CO.4958495.v1) or [GitHub](http://github.com/forestagostinelli/DeepCubeA/).
+
 ```python
 import pickle
 with open(filename, "rb") as f:
@@ -149,9 +154,16 @@ with open(filename, "rb") as f:
     solutions, times, num_nodes_generated = [data[k] for k in ['solutions', 'times', 'num_nodes_generated']]
     # solution_lengths = [len(e) for e in solutions]
 ```
-Please note that we only include the *actual* times taken per solution.
 
-The DeepCubeA dataset is available from either [Code Ocean](http://doi.org/10.24433/CO.4958495.v1) or [GitHub](http://github.com/forestagostinelli/DeepCubeA/).
+### 📢 UPDATE on 15 Puzzle
+> We additionally include updated results on 15 Puzzle, which are available as `./results/puzzle15/n=100000.k={beam_width}.pkl.update` (same filenames, followed by **`.update`**).
+> 
+> Two changes were made to the beam search implementation:
+> 1. fixed a small error which allowed the selection of impossible moves (i.e., not affecting the problem state) at the very beginning of a search. This fix slightly improved search performance.
+> 2. changed how to evaluate and sort candidates at every depth. \
+> Instead of sorting moves by their probabilities (softmax-ed logits) at depth level, we tried sorting *paths* by their cumulative probabilities (`search.beam_search(..., __eval="cumprod")`).
+> 
+> These changes yielded significantly better performance than before, **solving all the test cases optimally with fewer nodes expanded than DeepCubeA**. When `beam_width=2**16`, an average of $2.54\times10^6$ nodes were expanded per optimal solution.
 
 ---
 
