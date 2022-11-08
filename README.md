@@ -1,6 +1,9 @@
 # 🧩 Self-Supervision is All You Need for Solving Rubik's Cube 
 
+[![arXiv](https://img.shields.io/badge/arXiv-2106.03157-b31b1b?style=for-the-badge)](https://arxiv.org/abs/2106.03157)
+
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/kyo-takano/EfficientCube/blob/main/notebooks/EfficientCube_Rubik's_Cube.ipynb)
+[![Open in Kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://kaggle.com/kernels/welcome?src=https://github.com/kyo-takano/EfficientCube/blob/main/notebooks/EfficientCube_Rubik's_Cube.ipynb)
 [![Open in Replicate](https://raw.githubusercontent.com/kyo-takano/EfficientCube/main/imgs/replicate-badge.svg)](https://replicate.com/kyo-takano/efficientcube)
 
 This repository contains code, models, and solutions as reported in the following paper:
@@ -95,7 +98,7 @@ For full replications, please modify the hyperparameters.
 </table>
 
 ## Models
-We put [TorchScript](https://pytorch.org/docs/stable/jit.html) models as `./models/{cube3|puzzle15|lightsout7}/*steps_scripted.pth`.\
+We release [TorchScript](https://pytorch.org/docs/stable/jit.html) models as `./models/{cube3|puzzle15|lightsout7}/*steps_scripted.pth`.\
 **Please make sure torch=>1.12**
 
 Example usage (Rubik's Cube):
