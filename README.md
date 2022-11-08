@@ -95,7 +95,7 @@ For full replications, please modify the hyperparameters.
 </table>
 
 ## Models
-We put [TorchScript](https://pytorch.org/docs/stable/jit.html) models as `./models/{cube3|puzzle15|lightsout7}/*steps_scripted.pth`.
+We put [TorchScript](https://pytorch.org/docs/stable/jit.html) models as `./models/{cube3|puzzle15|lightsout7}/*steps_scripted.pth`.\
 **Please make sure torch=>1.12**
 
 Example usage (Rubik's Cube):
