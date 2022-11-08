@@ -7,7 +7,7 @@ from copy import deepcopy
 device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
 
 def greedy_search(env, model, max_depth, skip_redundant_moves=True):
-    return beam_search(env, max_depth, 1, __eval = 'logits', skip_redundant_moves=True)
+    return beam_search(env, model, max_depth, 1, __eval = 'logits', skip_redundant_moves=True)
 
 def beam_search(
         env,

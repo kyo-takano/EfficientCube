@@ -1,6 +1,7 @@
 # 🧩 Self-Supervision is All You Need for Solving Rubik's Cube 
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/kyo-takano/EfficientCube/blob/main/notebooks/main.ipynb) [![Try in Replicate](./imgs/replicate-badge.svg)](https://replicate.com/kyo-takano/efficientcube)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/kyo-takano/EfficientCube/blob/main/notebooks/EfficientCube_Rubik's_Cube.ipynb)
+[![Open in Replicate](https://raw.githubusercontent.com/kyo-takano/EfficientCube/main/imgs/replicate-badge.svg)](https://replicate.com/kyo-takano/efficientcube)
 
 This repository contains code, models, and solutions as reported in the following paper:
 > Takano, K. [Self-Supervision is All You Need for Solving Rubik's Cube](https://arxiv.org/abs/2106.03157). (2021) 
@@ -28,78 +29,66 @@ For full replications, please modify the hyperparameters.
             <td rowspan=1>Main</td>
             <td>Rubik's Cube</td>
             <td>
-                <a href="./notebooks/main.ipynb">
-                    <code>./notebooks/main.ipynb</code>
+                <a href="./notebooks/EfficientCube_Rubik's_Cube.ipynb">
+                    <code>./notebooks/EfficientCube_Rubik's_Cube.ipynb</code>
                     <a>
             </td>
             <td>
-                <a href="https://colab.research.google.com/github/kyo-takano/EfficientCube/blob/main/notebooks/main.ipynb" rel="nofollow" target="_blank">
+                <a href="https://colab.research.google.com/github/kyo-takano/EfficientCube/blob/main/notebooks/EfficientCube_Rubik's_Cube.ipynb" rel="nofollow" target="_blank">
                     <img src="https://colab.research.google.com/assets/colab-badge.svg" data-canonical-src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" style="max-width: 100%; min-height: 1rem;">
                 </a>
-                <a href="https://kaggle.com/kernels/welcome?src=https://github.com/kyo-takano/EfficientCube/blob/main/notebooks/main.ipynb" rel="nofollow" target="_self">
+                <a href="https://kaggle.com/kernels/welcome?src=https://github.com/kyo-takano/EfficientCube/blob/main/notebooks/EfficientCube_Rubik's_Cube.ipynb" rel="nofollow" target="_self">
                     <img src="https://kaggle.com/static/images/open-in-kaggle.svg" alt="Kaggle">
                 </a>
-                <!-- <a href="https://console.paperspace.com/github/kyo-takano/EfficientCube/blob/main/notebooks/main.ipynb">
-                    <img src="https://assets.paperspace.io/img/gradient-badge.svg" alt="Run on Gradient" />
-                </a> -->
             </td>
         </tr>
         <tr>
             <td rowspan=3>Appendix</td>
             <td white-space="nowrap">A: Assumption 1 on 2x2x2 Rubik's Cube</td>
             <td>
-                <a href="./notebooks/appendix_a.ipynb">
-                    <code>./notebooks/appendix_a.ipynb</code>
+                <a href="./notebooks/EfficientCube_Assumption_1.ipynb">
+                    <code>./notebooks/EfficientCube_Assumption_1.ipynb</code>
                     <a>
             </td>
             <td>
-                <a href="https://colab.research.google.com/github/kyo-takano/EfficientCube/blob/main/notebooks/appendix_a.ipynb" rel="nofollow" target="_blank">
+                <a href="https://colab.research.google.com/github/kyo-takano/EfficientCube/blob/main/notebooks/EfficientCube_Assumption_1.ipynb" rel="nofollow" target="_blank">
                     <img src="https://colab.research.google.com/assets/colab-badge.svg" data-canonical-src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" style="max-width: 100%; min-height: 1rem;">
                 </a>
-                <a href="https://kaggle.com/kernels/welcome?src=https://github.com/kyo-takano/EfficientCube/blob/main/notebooks/main.ipynb" rel="nofollow" target="_self">
+                <a href="https://kaggle.com/kernels/welcome?src=https://github.com/kyo-takano/EfficientCube/blob/main/notebooks/EfficientCube_Assumption_1.ipynb" rel="nofollow" target="_self">
                     <img src="https://kaggle.com/static/images/open-in-kaggle.svg" alt="Kaggle">
                 </a>
-                <!-- <a href="https://console.paperspace.com/github/kyo-takano/EfficientCube/blob/main/notebooks/appendix_a.ipynb">
-                    <img src="https://assets.paperspace.io/img/gradient-badge.svg" alt="Run on Gradient" />
-                </a> -->
             </td>
         </tr>
         <tr>
             <td>B: 15 Puzzle</td>
             <td>
-                <a href="./notebooks/appendix_b.ipynb">
-                    <code>./notebooks/appendix_b.ipynb</code>
+                <a href="./notebooks/EfficientCube_15_Puzzle.ipynb">
+                    <code>./notebooks/EfficientCube_15_Puzzle.ipynb</code>
                     <a>
             </td>
             <td>
-                <a href="https://colab.research.google.com/github/kyo-takano/EfficientCube/blob/main/notebooks/appendix_b.ipynb" rel="nofollow" target="_blank">
+                <a href="https://colab.research.google.com/github/kyo-takano/EfficientCube/blob/main/notebooks/EfficientCube_15_Puzzle.ipynb" rel="nofollow" target="_blank">
                     <img src="https://colab.research.google.com/assets/colab-badge.svg" data-canonical-src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" style="max-width: 100%; min-height: 1rem;">
                 </a>
-                <a href="https://kaggle.com/kernels/welcome?src=https://github.com/kyo-takano/EfficientCube/blob/main/notebooks/appendix_b.ipynb" rel="nofollow" target="_self">
+                <a href="https://kaggle.com/kernels/welcome?src=https://github.com/kyo-takano/EfficientCube/blob/main/notebooks/EfficientCube_15_Puzzle.ipynb" rel="nofollow" target="_self">
                     <img src="https://kaggle.com/static/images/open-in-kaggle.svg" alt="Kaggle">
                 </a>
-                <!-- <a href="https://console.paperspace.com/github/kyo-takano/EfficientCube/blob/main/notebooks/appendix_b.ipynb">
-                    <img src="https://assets.paperspace.io/img/gradient-badge.svg" alt="Run on Gradient" />
-                </a> -->
             </td>
         </tr>
         <tr>
             <td>C: 7x7 Lights Out</td>
             <td>
-                <a href="./notebooks/appendix_c.ipynb" target="_blank">
-                    <code>./notebooks/appendix_c.ipynb</code>
+                <a href="./notebooks/EfficientCube_Lights_Out.ipynb" target="_blank">
+                    <code>./notebooks/EfficientCube_Lights_Out.ipynb</code>
                     <a>
             </td>
             <td>
-                <a href="https://colab.research.google.com/github/kyo-takano/EfficientCube/blob/main/notebooks/appendix_c.ipynb" rel="nofollow" target="_blank"><img src="https://colab.research.google.com/assets/colab-badge.svg"
+                <a href="https://colab.research.google.com/github/kyo-takano/EfficientCube/blob/main/notebooks/EfficientCube_Lights_Out.ipynb" rel="nofollow" target="_blank"><img src="https://colab.research.google.com/assets/colab-badge.svg"
                         data-canonical-src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" style="max-width: 100%; min-height: 1rem;">
                 </a>
-                <a href="https://kaggle.com/kernels/welcome?src=https://github.com/kyo-takano/EfficientCube/blob/main/notebooks/appendix_c.ipynb" rel="nofollow" target="_self">
+                <a href="https://kaggle.com/kernels/welcome?src=https://github.com/kyo-takano/EfficientCube/blob/main/notebooks/EfficientCube_Lights_Out.ipynb" rel="nofollow" target="_self">
                     <img src="https://kaggle.com/static/images/open-in-kaggle.svg" alt="Kaggle">
                 </a>
-                <!-- <a href="https://console.paperspace.com/github/kyo-takano/EfficientCube/blob/main/notebooks/appendix_c.ipynb">
-                    <img src="https://assets.paperspace.io/img/gradient-badge.svg" alt="Run on Gradient" />
-                </a> -->
             </td>
         </tr>
     </tbody>
@@ -107,6 +96,7 @@ For full replications, please modify the hyperparameters.
 
 ## Models
 We put [TorchScript](https://pytorch.org/docs/stable/jit.html) models as `./models/{cube3|puzzle15|lightsout7}/*steps_scripted.pth`.
+**Please make sure torch=>1.12**
 
 Example usage (Rubik's Cube):
 ```python
@@ -118,7 +108,7 @@ max_depth = 52 # arbitrary
 # load the trained model
 import torch
 device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
-model = torch.jit.load(f"./models/cube3/1000000steps_scripted.pth").to(device)
+model = torch.jit.load("./models/cube3/1000000steps_scripted.pth").to(device)
 model.eval()
 
 # set up Rubik's Cube environment and apply the scramble
