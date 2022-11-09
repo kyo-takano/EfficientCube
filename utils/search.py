@@ -69,16 +69,16 @@ def beam_search(
                     for batch_x_mini in np.split(batch_x, len(candidates)//(2**16))
                 ]
                 batch_p = np.concatenate(batch_p)
+            if __eval in ["softmax","cumprod"]:
+                batch_p = softmax(batch_p, axis=1)
 
             # loop over candidates
             candidates_next_depth = []  # storage for the depth-level candidates storing (path, value, index).
             for i, c in enumerate(candidates):
                 c_path = c["path"]
                 value_distribution = batch_p[i, :] # output logits for the given state
-                if __eval in ["softmax","cumprod"]:
-                    value_distribution = softmax(value_distribution)
-                    if __eval=="cumprod":
-                        value_distribution *= c["value"] # multiply the cumulative probability so far of the expanded path
+                if __eval=="cumprod":
+                    value_distribution *= c["value"] # multiply the cumulative probability so far of the expanded path
 
                 for m, value in zip(env.moves_inference, value_distribution): # iterate over all possible moves.
                     # predicted value to expand the path with the given move.
